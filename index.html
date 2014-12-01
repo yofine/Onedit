@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/Onedit/seg.css">
+<link rel="stylesheet" href="/Onedit/bower_components/bootstrap/dist/css/bootstrap.css">
+<!--<link rel="stylesheet" id="color" href="./highlight/styles/monokai.css">-->
+</head>
+<body id="blog">
+<div id="write">
+  <div class="row write-body" id="markdown" style="border: 2px solid rgb(54, 138, 37)"></div>
+</div>
+<script src="/Onedit/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/Onedit/bower_components/html2canvas/build/html2canvas.js"></script>
+<script src="/Onedit/bower_components/jspdf/dist/jspdf.min.js"></script>
+<script src='/Onedit/build/app.js'></script>
+<!--<script src="./highlight/highlight.pack.js"></script>-->
+<!--<script>-->
+<!--$(document).ready(function() {-->
+    <!--$('pre code').each(function(i, block) {-->
+      <!--hljs.highlightBlock(block);-->
+      <!--});-->
+    <!--})-->
+<!--</script>-->
+<script>
+setInterval(function() {
+  localStorage.code = $('.write-content').children().val()
+  }, 500)
+</script>
+</body>
+</html>
+
