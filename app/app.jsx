@@ -25,11 +25,11 @@ var MarkdownEditor = React.createClass({
         </div>
         <div id="wmd-preview" className="col-md-6 col-xs-12 write-preview fmt content">
           <pre>
-          <code 
+          <code
             className=""
             dangerouslySetInnerHTML={{
-              __html: marked(this.state.value, {bare: false})
-              //__html: coffee.compile(this.state.value, {bare: false})
+              //__html: marked(this.state.value, {bare: false})
+              __html: coffee.compile(this.state.value, {bare: true})
               //__html: jsx.transform(this.state.value)
             }}>
           </code>
